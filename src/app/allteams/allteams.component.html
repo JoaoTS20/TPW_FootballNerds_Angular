@@ -1,0 +1,32 @@
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+</style>
+<section id="featured-services" class="featured-services">
+  <div class="section-title">
+    <h2>Teams</h2>
+    <h3>Check our <span>Teams</span></h3>
+    <p>Teams from all over the world with accurate data.</p>
+  </div>
+  <div class="container" data-aos="fade-up">
+    <div style="align-items: center" class="form-group">
+      <h3>Search by Name:</h3>
+      <input [(ngModel)]="name" (ngModelChange)="search()" class="form-control" type="text">
+    </div>
+    <hr>
+    <div class="row" >
+      <div *ngFor="let team of teams" class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-3">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <a routerLink="/teamdetails/{{ team.id }}"><img  class="center" src="{{baseURL}}{{ team.club_badge_img }}"></a>
+          <br>
+          <h1 class="ClubName" style="text-align: center"><a  class="ClubName" routerLink="{{ team.id }}">{{ team.abreviated_name }}</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,25 @@
+<section id="team" class="team">
+  <div class="section-title">
+    <h2>Staff</h2>
+    <h3>Check our <span>Staff</span></h3>
+    <p>Staff from all over the world with accurate data.</p>
+  </div>
+  <div style="align-items: center" class="form-group">
+    <h3>Search by Name:</h3>
+    <input [(ngModel)]="name" (ngModelChange)="search()" class="form-control" type="text">
+  </div>
+    <hr>
+    <div class="row">
+      <div *ngFor="let staff of staffs" class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <div class="member-img">
+            <a routerLink="/staffdetails/{{ staff.id }}"><img style="height: 185px; width: 185px" src="{{baseURL}}{{ staff.staff_img }}" class="img-fluid" alt=""></a>
+          </div>
+          <div class="member-info">
+            <h4 style="text-align: center"><a routerLink="/staffdetails/{{ staff.id }}">{{ staff.name }}</a></h4>
+            <span style="text-align: center">{{ staff.funcao }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

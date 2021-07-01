@@ -1,0 +1,24 @@
+<section id="services" class="services" >
+  <div class="section-title">
+    <h2>Competitions</h2>
+    <h3>Check our <span>Competitions</span></h3>
+    <p>Competitions from all over the world with accurate data.</p>
+  </div>
+  <div class="container" data-aos="fade-up">
+    <div style="align-items: center" class="form-group">
+      <h3>Search by Name:</h3>
+      <input [(ngModel)]="name" (ngModelChange)="search()" class="form-control " type="text">
+    </div>
+    <hr>
+    <div class="row">
+      <div *ngFor="let competition of competitions" class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-3">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <a routerLink="/competitiondetails/{{ competition.id }}"><img class="center"  src="{{baseURL}}{{ competition.competition_badge_img }}"></a>
+          <br>
+          <h2 class="ClubName" style="text-align: center"><a  class="ClubName" routerLink="/competitiondetails/{{ competition.id }}">{{ competition.full_name }}</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
