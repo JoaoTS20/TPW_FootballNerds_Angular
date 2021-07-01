@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -28,8 +31,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
-    "@angular/cli": "~12.0.0",
-    "@angular/compiler-cli": "~12.0.0",
+    "@angular/cli": "~12.1.0",
+    "@angular/compiler-cli": "~12.0.5",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.7.0",
@@ -38,7 +41,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "typescript": "~4.2.3"
+    "typescript": "~4.2.4"
   },
     "engines": {
     "node": "12.18.2",
