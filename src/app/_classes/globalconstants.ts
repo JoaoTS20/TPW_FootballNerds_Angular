@@ -1,4 +1,4 @@
 export class GlobalConstants {
-  public static apiurl: string = "http://joaots.pythonanywhere.com/ws/"
-  public static baseurl: string = "http://joaots.pythonanywhere.com"
+  public static apiurl: string = "https://joaots.pythonanywhere.com/ws/"
+  public static baseurl: string = "https://joaots.pythonanywhere.com"
 }
